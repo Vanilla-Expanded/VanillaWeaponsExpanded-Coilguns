@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
   <!--========== Gauss rifle ============-->
@@ -28,7 +28,7 @@
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>Weapon/ShotGaussRifle_1</clipFolderPath>
+            <clipFolderPath>Weapon/ShotGaussRifle</clipFolderPath>
           </li>
         </grains>
         <pitchRange>0.8376015~0.9169372</pitchRange>
@@ -65,7 +65,7 @@
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>Weapon/ShotGaussMagnum_1</clipFolderPath>
+            <clipFolderPath>Weapon/ShotGaussMagnum</clipFolderPath>
           </li>
         </grains>
         <!-- Finetuning required -->
@@ -86,8 +86,8 @@
     <subSounds>
       <li>
         <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Weapon/GaussLance</clipFolderPath>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Weapon/GaussLance</clipPath>
           </li>
         </grains>
         <pitchRange>0.7976015~0.8669372</pitchRange>
