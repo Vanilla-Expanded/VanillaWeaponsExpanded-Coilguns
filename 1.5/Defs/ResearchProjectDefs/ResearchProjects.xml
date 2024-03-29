@@ -22,6 +22,15 @@
     <researchViewX>6.00</researchViewX>
     <researchViewY>6.20</researchViewY>
 		<tab>VanillaExpanded</tab>
+		<generalRules>
+  <rulesStrings>
+    <li>subject->velocity as a weapon</li>
+    <li>subject_story->mastered the physics of electromagnetic acceleration, creating weapons that launch projectiles at staggering speeds</li>
+    <li>subject_story->engineered mass drivers capable of breaching the most formidable armor, reshaping the principles of warfare and defense</li>
+    <li>subject_story->unveiled a new era where kinetic energy defines the cutting edge of military technology</li>
+    <li>subject_gerund->harnessing the unstoppable force of hypervelocity for unmatched offensive capability</li>
+  </rulesStrings>
+</generalRules>
   </ResearchProjectDef>
 
 </Defs>
