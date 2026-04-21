@@ -6,7 +6,7 @@
 	<ThingDef ParentName="BaseHumanMakeableGun">
 		<defName>VWE_Gun_GaussRifle</defName>
 		<label>gauss rifle</label>
-		<description>A spacer-tech gauss rifle. A set of coils accelerate ferromagnetic sabots up to breakneck speeds, penetrating armor and piercing through multiple targets alike. These weapons are popular among frontline infantry fighting in mechanoid wars.</description>
+		<description>A powerful mass driver rifle utilizing magnetic acceleration to launch ferromagnetic sabots. The incredible velocity and specialized ammunition allow it to completely negate most forms of conventional armor.</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/GaussRifle</texPath>
@@ -14,27 +14,26 @@
 		</graphicData>
 		<soundInteract>VWE_Interact_GaussRifle</soundInteract>
 		<statBases>
-			<WorkToMake>45000</WorkToMake>
-			<Mass>5</Mass>
-			<AccuracyTouch>0.55</AccuracyTouch>
-			<AccuracyShort>0.64</AccuracyShort>
-			<AccuracyMedium>0.70</AccuracyMedium>
-			<AccuracyLong>0.50</AccuracyLong>
-			<RangedWeapon_Cooldown>2.00</RangedWeapon_Cooldown>
+			<WorkToMake>70000</WorkToMake>
+			<Mass>4.2</Mass>
+			<AccuracyTouch>0.5</AccuracyTouch>
+			<AccuracyShort>0.6</AccuracyShort>
+			<AccuracyMedium>0.55</AccuracyMedium>
+			<AccuracyLong>0.5</AccuracyLong>
+			<RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
 		</statBases>
 		<recipeMaker>
 			<researchPrerequisite>VWE_MassDrivers</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>7</Crafting>
+				<Crafting>8</Crafting>
 			</skillRequirements>
 			<recipeUsers Inherit="False">
 				<li>FabricationBench</li>
 			</recipeUsers>
 		</recipeMaker>
 		<costList>
-			<Steel>80</Steel>
-			<Uranium>20</Uranium>
-			<ComponentSpacer>2</ComponentSpacer>
+			<Plasteel>40</Plasteel>
+			<ComponentSpacer>3</ComponentSpacer>
 		</costList>
 		<thingSetMakerTags>
 			<li>RewardStandardLowFreq</li>
@@ -46,23 +45,44 @@
 			<li>Coilgun</li>
 		</weaponTags>
 		<verbs>
-			<li>
-				<verbClass>Verb_Shoot</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>VWE_Bullet_GaussRifle</defaultProjectile>
-				<warmupTime>2.0</warmupTime>
-				<range>30.9</range>
-				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-				<burstShotCount>3</burstShotCount>
-				<soundCast>VWE_Shot_GaussRifle</soundCast>
-				<soundCastTail>GunTail_Medium</soundCastTail>
-				<muzzleFlashScale>9</muzzleFlashScale>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <!-- Label required for multi verb comp. Translating it is safe, since the comp uses the untranslated label (which RW keeps around). -->
+        <label>low power shot</label>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>VWE_Bullet_GaussRifle_LowPower</defaultProjectile>
+        <warmupTime>2</warmupTime>
+        <range>27.9</range>
+        <ticksBetweenBurstShots>16</ticksBetweenBurstShots>
+        <burstShotCount>3</burstShotCount>
+        <soundCast>VWE_Shot_GaussRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+<!--        <targetParams>-->
+<!--          <canTargetLocations>true</canTargetLocations>-->
+<!--          <canTargetPawns>true</canTargetPawns>-->
+<!--          <canTargetBuildings>true</canTargetBuildings>-->
+<!--        </targetParams>-->
+      </li>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <!-- Label required for multi verb comp. Translating it is safe, since the comp uses the untranslated label (which RW keeps around). -->
+        <label>high power shot</label>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>VWE_Bullet_GaussRifle</defaultProjectile>
+        <warmupTime>4</warmupTime>
+        <range>27.9</range>
+        <ticksBetweenBurstShots>16</ticksBetweenBurstShots>
+        <burstShotCount>3</burstShotCount>
+        <soundCast>VWE_Shot_GaussRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
         <targetParams>
           <canTargetLocations>true</canTargetLocations>
           <canTargetPawns>true</canTargetPawns>
           <canTargetBuildings>true</canTargetBuildings>
         </targetParams>
-			</li>
+      </li>
 		</verbs>
 		<tools>
 			<li>
@@ -84,19 +104,49 @@
 			</li>
 		</tools>
 		<comps>
+      <li Class="VEF.Weapons.CompProperties_MultiVerbWeapon">
+        <!-- Uses the untranslated verb label for matching. -->
+        <defaultVerbLabel>low power shot</defaultVerbLabel>
+        <!-- Also supports DoubleVerbToggle, SingleToggleGizmo, MultiToggleGizmo or FloatMenuGizmo. -->
+        <!-- DoubleVerbToggle and DoubleVerbToggleMirrored specifically requires 2 verbs, requires a default verb -->
+        <switchMode>DoubleVerbToggleMirrored</switchMode>
+
+        <!-- Default gizmo data. Each verb can include its own label/description/icon override. -->
+        <gizmoLabel>High-power mode</gizmoLabel>
+        <gizmoDescription>High-power mode improves penetration capability of the shots, allowing them to penetrate several targets, but increases the warm up time of the weapon. The damage diminishes with each target hit.</gizmoDescription>
+        <gizmoIconPath>UI/Gizmos/GaussHighPowerModeToggle</gizmoIconPath>
+
+        <verbs>
+          <li>
+            <!-- Again, uses the untranslated verb label for matching. -->
+            <verbLabel>low power shot</verbLabel>
+          </li>
+          <li>
+            <verbLabel>high power shot</verbLabel>
+          </li>
+        </verbs>
+      </li>
 		</comps>
 	</ThingDef>
 
-	<VEF.Weapons.ExpandableProjectileDef ParentName="BaseBullet">
+  <ThingDef Name="VWE_Bullet_GaussRifle" ParentName="BaseBullet">
+    <defName>VWE_Bullet_GaussRifle_LowPower</defName>
+    <label>gauss rifle sabot</label>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>14</damageAmountBase>
+      <armorPenetrationBase>2</armorPenetrationBase>
+      <stoppingPower>0.5</stoppingPower>
+      <speed>220</speed>
+    </projectile>
+    <graphicData>
+      <texPath>Projectiles/DirectShots/CoilgunShot_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+
+	<VEF.Weapons.ExpandableProjectileDef ParentName="VWE_Bullet_GaussRifle">
 		<defName>VWE_Bullet_GaussRifle</defName>
-		<label>gauss rifle sabot</label>
-		<projectile>
-			<damageDef>Bullet</damageDef>
-			<damageAmountBase>12</damageAmountBase>
-			<armorPenetrationBase>0.50</armorPenetrationBase>
-			<stoppingPower>1</stoppingPower>
-			<speed>150</speed>
-		</projectile>
 		<thingClass>VEF.Weapons.GaussProjectile</thingClass>
 		<graphicData>
 			<texPath>Projectiles/Proj_CoilgunFadeIn</texPath>
