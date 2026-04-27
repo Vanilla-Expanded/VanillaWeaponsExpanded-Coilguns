@@ -21,6 +21,7 @@
 			<AccuracyMedium>0.55</AccuracyMedium>
 			<AccuracyLong>0.5</AccuracyLong>
 			<RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+      <VEF_GaussProjectileDamageModifier>-0.2</VEF_GaussProjectileDamageModifier>
 		</statBases>
 		<recipeMaker>
 			<researchPrerequisite>VWE_MassDrivers</researchPrerequisite>
@@ -166,27 +167,16 @@
 		<dealsDamageOnce>true</dealsDamageOnce>
 		<disableVanillaDamageMethod>true</disableVanillaDamageMethod>
 		<stopWhenHit>false</stopWhenHit>
+    <stopWhenNaturalRockHit>true</stopWhenNaturalRockHit>
+    <stopWhenZeroDamageAfterHit>true</stopWhenZeroDamageAfterHit>
 		<stopWhenHitAt>
 			<li>CollapsedRocks</li>
-			<li>MineableSteel</li>
-			<li>MineableSilver</li>
-			<li>MineableGold</li>
-			<li>MineableUranium</li>
-			<li>MineablePlasteel</li>
-			<li>MineableJade</li>
-			<li>MineableComponentsIndustrial</li>
 			<li>RaisedRocks</li>
-			<li>Sandstone</li>
-			<li>SmoothedSandstone</li>
-			<li>Granite</li>
-			<li>SmoothedGranite</li>
-			<li>Limestone</li>
-			<li>SmoothedLimestone</li>
-			<li>Slate</li>
-			<li>SmoothedSlate</li>
-			<li>Marble</li>
-			<li>SmoothedMarble</li>
 		</stopWhenHitAt>
+    <gauss>
+      <includeInterceptChanceFromDistanceForFriendlyFire>true</includeInterceptChanceFromDistanceForFriendlyFire>
+      <damageWorkerClass>VEF.Weapons.GaussProjectileLinearDamageWorker</damageWorkerClass>
+    </gauss>
 	</VEF.Weapons.ExpandableProjectileDef>
 
 	<!--========== Gauss magnum ============-->
@@ -302,28 +292,13 @@
 		<tickDamageRate>5</tickDamageRate>
 		<dealsDamageOnce>true</dealsDamageOnce>
 		<disableVanillaDamageMethod>true</disableVanillaDamageMethod>
-		<stopWhenHit>false</stopWhenHit>
-		<stopWhenHitAt>
-			<li>MineableSteel</li>
-			<li>CollapsedRocks</li>
-			<li>MineableSilver</li>
-			<li>MineableGold</li>
-			<li>MineableUranium</li>
-			<li>MineablePlasteel</li>
-			<li>MineableJade</li>
-			<li>MineableComponentsIndustrial</li>
-			<li>RaisedRocks</li>
-			<li>Sandstone</li>
-			<li>SmoothedSandstone</li>
-			<li>Granite</li>
-			<li>SmoothedGranite</li>
-			<li>Limestone</li>
-			<li>SmoothedLimestone</li>
-			<li>Slate</li>
-			<li>SmoothedSlate</li>
-			<li>Marble</li>
-			<li>SmoothedMarble</li>
-		</stopWhenHitAt>
+    <stopWhenHit>false</stopWhenHit>
+    <stopWhenNaturalRockHit>true</stopWhenNaturalRockHit>
+    <stopWhenZeroDamageAfterHit>true</stopWhenZeroDamageAfterHit>
+    <stopWhenHitAt>
+      <li>CollapsedRocks</li>
+      <li>RaisedRocks</li>
+    </stopWhenHitAt>
 	</VEF.Weapons.ExpandableProjectileDef>
 
 	<!--========== Gauss lance ============-->
@@ -450,28 +425,13 @@
 		<tickDamageRate>5</tickDamageRate>
 		<disableVanillaDamageMethod>true</disableVanillaDamageMethod>
 		<dealsDamageOnce>true</dealsDamageOnce>
-		<stopWhenHit>false</stopWhenHit>
-		<stopWhenHitAt>
-			<li>MineableSteel</li>
-			<li>CollapsedRocks</li>
-			<li>MineableSilver</li>
-			<li>MineableGold</li>
-			<li>MineableUranium</li>
-			<li>MineablePlasteel</li>
-			<li>MineableJade</li>
-			<li>MineableComponentsIndustrial</li>
-			<li>RaisedRocks</li>
-			<li>Sandstone</li>
-			<li>SmoothedSandstone</li>
-			<li>Granite</li>
-			<li>SmoothedGranite</li>
-			<li>Limestone</li>
-			<li>SmoothedLimestone</li>
-			<li>Slate</li>
-			<li>SmoothedSlate</li>
-			<li>Marble</li>
-			<li>SmoothedMarble</li>
-		</stopWhenHitAt>
+    <stopWhenHit>false</stopWhenHit>
+    <stopWhenNaturalRockHit>true</stopWhenNaturalRockHit>
+    <stopWhenZeroDamageAfterHit>true</stopWhenZeroDamageAfterHit>
+    <stopWhenHitAt>
+      <li>CollapsedRocks</li>
+      <li>RaisedRocks</li>
+    </stopWhenHitAt>
 	</VEF.Weapons.ExpandableProjectileDef>
 
 
