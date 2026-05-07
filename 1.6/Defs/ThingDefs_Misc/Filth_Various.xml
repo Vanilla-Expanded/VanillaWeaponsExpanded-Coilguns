@@ -6,7 +6,6 @@
     <label>bullet hole</label>
     <graphicData>
       <texPath>Things/Filth/CoilgunHole</texPath>
-      <onGroundRandomRotateAngle>360</onGroundRandomRotateAngle>
     </graphicData>
     <filth>
       <placementMask>
