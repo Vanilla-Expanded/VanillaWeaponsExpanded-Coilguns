@@ -173,6 +173,9 @@
 			<li>CollapsedRocks</li>
 			<li>RaisedRocks</li>
 		</stopWhenHitAt>
+    <filthOnUninterrupted>VWE_Filth_BulletHole</filthOnUninterrupted>
+    <filthOnUninterruptedChance>1</filthOnUninterruptedChance>
+    <filthOnUninterruptedCount>1</filthOnUninterruptedCount>
     <gauss>
       <includeInterceptChanceFromDistanceForFriendlyFire>true</includeInterceptChanceFromDistanceForFriendlyFire>
       <damageWorkerClass>VEF.Weapons.GaussProjectileLinearDamageWorker</damageWorkerClass>
