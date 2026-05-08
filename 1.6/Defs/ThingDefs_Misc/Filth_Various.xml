@@ -12,12 +12,10 @@
         <li>Terrain</li>
         <li>Unnatural</li>
       </placementMask>
-      <!-- Never disappears on its own -->
-      <disappearsInDays>0</disappearsInDays>
-      <!-- Not washed by rain -->
-      <rainWashes>false</rainWashes>
+      <disappearsInDays>50~70</disappearsInDays>
+      <rainWashes>true</rainWashes>
       <!-- Takes a while to remove a bullet hole -->
-      <cleaningWorkToReduceThickness>600</cleaningWorkToReduceThickness>
+      <cleaningWorkToReduceThickness>100</cleaningWorkToReduceThickness>
       <!-- Can't attach to pawns -->
       <canFilthAttach>false</canFilthAttach>
       <cleaningSound>Interact_CleanFilth_Dirt</cleaningSound>
