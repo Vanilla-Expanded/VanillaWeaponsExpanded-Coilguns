@@ -59,11 +59,6 @@
         <soundCast>VWE_Shot_GaussRifle</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>5</muzzleFlashScale>
-<!--        <targetParams>-->
-<!--          <canTargetLocations>true</canTargetLocations>-->
-<!--          <canTargetPawns>true</canTargetPawns>-->
-<!--          <canTargetBuildings>true</canTargetBuildings>-->
-<!--        </targetParams>-->
       </li>
       <li>
         <verbClass>Verb_Shoot</verbClass>
@@ -182,12 +177,12 @@
     </gauss>
 	</VEF.Weapons.ExpandableProjectileDef>
 
-	<!--========== Gauss magnum ============-->
+	<!--========== Gauss revolver ============-->
 
 	<ThingDef ParentName="BaseHumanMakeableGun">
 		<defName>VWE_Gun_GaussMagnum</defName>
-		<label>gauss magnum</label>
-		<description>A spacer-tech gauss pistol. An array of coils accelerate sabot projectiles from a revolving drum, penetrating armor and piercing through targets in its path. It charges quicker than most coilguns at the cost of decreased damage.</description>
+		<label>gauss revolver</label>
+		<description>A powerful mass driver pistol utilizing magnetic acceleration to launch ferromagnetic sabots. The incredible velocity and specialized ammunition allow it to completely negate most forms of conventional armor.</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/GaussMagnum</texPath>
@@ -195,26 +190,25 @@
 		</graphicData>
 		<soundInteract>VWE_Interact_GaussMagnum</soundInteract>
 		<statBases>
-			<WorkToMake>40000</WorkToMake>
-			<Mass>1.6</Mass>
-			<AccuracyTouch>0.70</AccuracyTouch>
-			<AccuracyShort>0.80</AccuracyShort>
-			<AccuracyMedium>0.50</AccuracyMedium>
-			<AccuracyLong>0.35</AccuracyLong>
-			<RangedWeapon_Cooldown>1.60</RangedWeapon_Cooldown>
+			<WorkToMake>48000</WorkToMake>
+			<Mass>2.15</Mass>
+			<AccuracyTouch>0.77</AccuracyTouch>
+			<AccuracyShort>0.73</AccuracyShort>
+			<AccuracyMedium>0.6</AccuracyMedium>
+			<AccuracyLong>0.45</AccuracyLong>
+			<RangedWeapon_Cooldown>1.466666</RangedWeapon_Cooldown>
 		</statBases>
 		<recipeMaker>
 			<researchPrerequisite>VWE_MassDrivers</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>6</Crafting>
+				<Crafting>8</Crafting>
 			</skillRequirements>
 			<recipeUsers Inherit="False">
 				<li>FabricationBench</li>
 			</recipeUsers>
 		</recipeMaker>
 		<costList>
-			<Steel>45</Steel>
-			<Uranium>10</Uranium>
+      <Plasteel>35</Plasteel>
 			<ComponentSpacer>1</ComponentSpacer>
 		</costList>
 		<thingSetMakerTags>
@@ -228,21 +222,35 @@
 		</weaponTags>
 		<generateCommonality>0.1</generateCommonality>
 		<verbs>
-			<li>
-				<verbClass>Verb_Shoot</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>VWE_Bullet_GaussMagnum</defaultProjectile>
-				<warmupTime>0.5</warmupTime>
-				<range>25.9</range>
-				<soundCast>VWE_Shot_GaussMagnum</soundCast>
-				<soundCastTail>GunTail_Light</soundCastTail>
-				<muzzleFlashScale>9</muzzleFlashScale>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <!-- Label required for multi verb comp. Translating it is safe, since the comp uses the untranslated label (which RW keeps around). -->
+        <label>low power shot</label>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>VWE_Bullet_GaussMagnum_LowPower</defaultProjectile>
+        <warmupTime>0.6</warmupTime>
+        <range>19.9</range>
+        <soundCast>VWE_Shot_GaussMagnum</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+      </li>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <!-- Label required for multi verb comp. Translating it is safe, since the comp uses the untranslated label (which RW keeps around). -->
+        <label>high power shot</label>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>VWE_Bullet_GaussMagnum</defaultProjectile>
+        <warmupTime>1.2</warmupTime>
+        <range>19.9</range>
+        <soundCast>VWE_Shot_GaussMagnum</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
         <targetParams>
           <canTargetLocations>true</canTargetLocations>
           <canTargetPawns>true</canTargetPawns>
           <canTargetBuildings>true</canTargetBuildings>
         </targetParams>
-			</li>
+      </li>
 		</verbs>
 		<tools>
 			<li>
@@ -264,28 +272,53 @@
 			</li>
 		</tools>
 		<comps>
+      <li Class="VEF.Weapons.CompProperties_MultiVerbWeapon">
+        <defaultVerbLabel>low power shot</defaultVerbLabel>
+        <switchMode>DoubleVerbToggleMirrored</switchMode>
+
+        <gizmoLabel>High-power mode</gizmoLabel>
+        <gizmoDescription>High-power mode improves penetration capability of the shots, allowing them to penetrate several targets, but increases the warm up time of the weapon. The damage diminishes with each target hit.</gizmoDescription>
+        <gizmoIconPath>UI/Gizmos/GaussHighPowerModeToggle</gizmoIconPath>
+
+        <verbs>
+          <li>
+            <verbLabel>low power shot</verbLabel>
+          </li>
+          <li>
+            <verbLabel>high power shot</verbLabel>
+          </li>
+        </verbs>
+      </li>
 		</comps>
 	</ThingDef>
 
-	<VEF.Weapons.ExpandableProjectileDef ParentName="BaseBullet">
+  <ThingDef Name="VWE_Bullet_GaussMagnum" ParentName="BaseBullet">
+    <defName>VWE_Bullet_GaussMagnum_LowPower</defName>
+    <label>gauss revolver sabot</label>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>16</damageAmountBase>
+      <armorPenetrationBase>2</armorPenetrationBase>
+      <stoppingPower>1</stoppingPower>
+      <speed>220</speed>
+    </projectile>
+    <graphicData>
+      <texPath>Projectiles/DirectShots/CoilgunShot_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+
+	<VEF.Weapons.ExpandableProjectileDef ParentName="VWE_Bullet_GaussMagnum">
 		<defName>VWE_Bullet_GaussMagnum</defName>
-		<label>gauss magnum sabot</label>
-		<projectile>
-			<damageDef>Bullet</damageDef>
-			<damageAmountBase>14</damageAmountBase>
-			<armorPenetrationBase>0.50</armorPenetrationBase>
-			<stoppingPower>1</stoppingPower>
-			<speed>150</speed>
-		</projectile>
-		<thingClass>VEF.Weapons.GaussProjectile</thingClass>
+    <thingClass>VEF.Weapons.GaussProjectile</thingClass>
 		<graphicData>
 			<texPath>Projectiles/Proj_CoilgunFadeIn</texPath>
 			<texPathFadeOut>Projectiles/Proj_CoilgunFadeOut</texPathFadeOut>
 		</graphicData>
 		<reachMaxRangeAlways>true</reachMaxRangeAlways>
+		<minDistanceToAffect>1.9</minDistanceToAffect>
 		<drawOffscreen>true</drawOffscreen>
 		<lifeTimeDuration>50</lifeTimeDuration>
-		<minDistanceToAffect>1.9</minDistanceToAffect>
 		<widthScaleFactor>0.10</widthScaleFactor>
 		<heightScaleFactor>1</heightScaleFactor>
 		<startingPositionOffset>(0,0,-1)</startingPositionOffset>
@@ -302,6 +335,13 @@
       <li>CollapsedRocks</li>
       <li>RaisedRocks</li>
     </stopWhenHitAt>
+    <filthOnUninterrupted>VWE_Filth_BulletHole</filthOnUninterrupted>
+    <filthOnUninterruptedChance>1</filthOnUninterruptedChance>
+    <filthOnUninterruptedCount>1</filthOnUninterruptedCount>
+    <gauss>
+      <includeInterceptChanceFromDistanceForFriendlyFire>true</includeInterceptChanceFromDistanceForFriendlyFire>
+      <damageWorkerClass>VEF.Weapons.GaussProjectileLinearDamageWorker</damageWorkerClass>
+    </gauss>
 	</VEF.Weapons.ExpandableProjectileDef>
 
 	<!--========== Gauss lance ============-->
@@ -309,22 +349,22 @@
 	<ThingDef ParentName="BaseHumanMakeableGun">
 		<defName>VWE_Gun_GaussLance</defName>
 		<label>gauss lance</label>
-		<description>A spacer-tech gauss lance. A series of electromagnetic coils catapult a single shot at hypervelocity, shredding armor and punching through any targets in its path. It is fired from the hip, utilizing an onboard computer to track and adjust to distant targets.</description>
+		<description>A powerful, long range mass driver lance utilizing magnetic acceleration to launch ferromagnetic sabots. The incredible velocity and specialized ammunition allow it to completely negate most forms of conventional armor.</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/GaussLance</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>1</drawSize>
 		</graphicData>
 		<soundInteract>VWE_Interact_GaussRifle</soundInteract>
 		<statBases> 
-			<WorkToMake>90000</WorkToMake>
-			<Mass>11.6</Mass>
-			<AccuracyTouch>0.40</AccuracyTouch>
-			<AccuracyShort>0.65</AccuracyShort>
-			<AccuracyMedium>0.86</AccuracyMedium>
-			<AccuracyLong>0.88</AccuracyLong>
-			<RangedWeapon_Cooldown>3.50</RangedWeapon_Cooldown>
+			<WorkToMake>100000</WorkToMake>
+			<Mass>7.25</Mass>
+			<AccuracyTouch>0.3</AccuracyTouch>
+			<AccuracyShort>0.5</AccuracyShort>
+			<AccuracyMedium>0.8</AccuracyMedium>
+			<AccuracyLong>0.9</AccuracyLong>
+			<RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+      <VEF_GaussProjectileDamageModifier>-0.2</VEF_GaussProjectileDamageModifier>
 		</statBases>
 		<recipeMaker>
 			<researchPrerequisite>VWE_MassDrivers</researchPrerequisite>
@@ -336,8 +376,7 @@
 			</recipeUsers>
 		</recipeMaker>
 		<costList>
-			<Steel>180</Steel>
-			<Uranium>40</Uranium>
+			<Plasteel>180</Plasteel>
 			<ComponentSpacer>6</ComponentSpacer>
 		</costList>
 		<thingSetMakerTags>
@@ -353,21 +392,35 @@
 			<MoveSpeed>-0.08</MoveSpeed>
 		</equippedStatOffsets>
 		<verbs>
-			<li>
-				<verbClass>Verb_Shoot</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>VWE_Bullet_GaussLance</defaultProjectile>
-				<warmupTime>5.50</warmupTime>
-				<range>44.9</range>
-				<soundCast>VWE_Shot_GaussLance</soundCast>
-				<soundCastTail>GunTail_Heavy</soundCastTail>
-				<muzzleFlashScale>14</muzzleFlashScale>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <!-- Label required for multi verb comp. Translating it is safe, since the comp uses the untranslated label (which RW keeps around). -->
+        <label>low power shot</label>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>VWE_Bullet_GaussLance_LowPower</defaultProjectile>
+        <warmupTime>2.4166666</warmupTime>
+        <range>44.9</range>
+        <soundCast>VWE_Shot_GaussLance</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>7</muzzleFlashScale>
+      </li>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <!-- Label required for multi verb comp. Translating it is safe, since the comp uses the untranslated label (which RW keeps around). -->
+        <label>high power shot</label>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>VWE_Bullet_GaussLance</defaultProjectile>
+        <warmupTime>4.833333</warmupTime>
+        <range>44.9</range>
+        <soundCast>VWE_Shot_GaussLance</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
         <targetParams>
           <canTargetLocations>true</canTargetLocations>
           <canTargetPawns>true</canTargetPawns>
           <canTargetBuildings>true</canTargetBuildings>
         </targetParams>
-			</li>
+      </li>
 		</verbs>
 		<tools>
 			<li>
@@ -380,45 +433,73 @@
 			</li>
 		</tools>
 		<equippedAngleOffset>53</equippedAngleOffset>
-	<modExtensions>
-		<li Class="VEF.Things.ThingDefExtension">
-			<weaponCarryDrawOffsets>
-				<north>
-					<drawOffset>(0,0,-0.18)</drawOffset>
-				</north>
-				<east>
-					<drawOffset>(0,0,-0.18)</drawOffset>
-				</east>
-				<south>
-					<drawOffset>(0,0,-0.18)</drawOffset>
-				</south>
-				<west>
-					<drawOffset>(0,0,-0.18)</drawOffset>
-				</west>
-			</weaponCarryDrawOffsets>
-		</li>
-	</modExtensions>
+    <comps>
+      <li Class="VEF.Weapons.CompProperties_MultiVerbWeapon">
+        <defaultVerbLabel>low power shot</defaultVerbLabel>
+        <switchMode>DoubleVerbToggleMirrored</switchMode>
+
+        <gizmoLabel>High-power mode</gizmoLabel>
+        <gizmoDescription>High-power mode improves penetration capability of the shots, allowing them to penetrate several targets, but increases the warm up time of the weapon. The damage diminishes with each target hit.</gizmoDescription>
+        <gizmoIconPath>UI/Gizmos/GaussHighPowerModeToggle</gizmoIconPath>
+
+        <verbs>
+          <li>
+            <verbLabel>low power shot</verbLabel>
+          </li>
+          <li>
+            <verbLabel>high power shot</verbLabel>
+          </li>
+        </verbs>
+      </li>
+    </comps>
+	  <modExtensions>
+	  	<li Class="VEF.Things.ThingDefExtension">
+	  		<weaponCarryDrawOffsets>
+	  			<north>
+	  				<drawOffset>(0,0,-0.18)</drawOffset>
+	  			</north>
+	  			<east>
+	  				<drawOffset>(0,0,-0.18)</drawOffset>
+	  			</east>
+	  			<south>
+	  				<drawOffset>(0,0,-0.18)</drawOffset>
+	  			</south>
+	  			<west>
+	  				<drawOffset>(0,0,-0.18)</drawOffset>
+	  			</west>
+	  		</weaponCarryDrawOffsets>
+	  	</li>
+	  </modExtensions>
 	</ThingDef>
 
-	<VEF.Weapons.ExpandableProjectileDef ParentName="BaseBullet">
+  <ThingDef Name="VWE_Bullet_GaussLance" ParentName="BaseBullet">
+    <defName>VWE_Bullet_GaussLance_LowPower</defName>
+    <label>gauss lance sabot</label>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>40</damageAmountBase>
+      <armorPenetrationBase>2</armorPenetrationBase>
+      <stoppingPower>3</stoppingPower>
+      <speed>280</speed>
+    </projectile>
+    <graphicData>
+      <texPath>Projectiles/DirectShots/CoilgunShot_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+
+	<VEF.Weapons.ExpandableProjectileDef ParentName="VWE_Bullet_GaussLance">
 		<defName>VWE_Bullet_GaussLance</defName>
-		<label>gauss lance sabot</label>
-		<projectile>
-			<damageDef>Bullet</damageDef>
-			<damageAmountBase>40</damageAmountBase>
-			<armorPenetrationBase>0.70</armorPenetrationBase>
-			<stoppingPower>1.5</stoppingPower>
-			<speed>150</speed>
-		</projectile>
-		<thingClass>VEF.Weapons.GaussProjectile</thingClass>
+    <thingClass>VEF.Weapons.GaussProjectile</thingClass>
 		<graphicData>
 			<texPath>Projectiles/Proj_CoilgunFadeIn</texPath>
 			<texPathFadeOut>Projectiles/Proj_CoilgunFadeOut</texPathFadeOut>
 		</graphicData>
 		<reachMaxRangeAlways>true</reachMaxRangeAlways>
 		<drawOffscreen>true</drawOffscreen>
-		<lifeTimeDuration>50</lifeTimeDuration>
 		<minDistanceToAffect>1.9</minDistanceToAffect>
+    <drawOffscreen>true</drawOffscreen>
+		<lifeTimeDuration>50</lifeTimeDuration>
 		<widthScaleFactor>0.10</widthScaleFactor>
 		<heightScaleFactor>1</heightScaleFactor>
 		<startingPositionOffset>(0,0,-1)</startingPositionOffset>
@@ -426,8 +507,8 @@
 		<tickFrameRate>2</tickFrameRate>
 		<finalTickFrameRate>2</finalTickFrameRate>
 		<tickDamageRate>5</tickDamageRate>
-		<disableVanillaDamageMethod>true</disableVanillaDamageMethod>
 		<dealsDamageOnce>true</dealsDamageOnce>
+		<disableVanillaDamageMethod>true</disableVanillaDamageMethod>
     <stopWhenHit>false</stopWhenHit>
     <stopWhenNaturalRockHit>true</stopWhenNaturalRockHit>
     <stopWhenZeroDamageAfterHit>true</stopWhenZeroDamageAfterHit>
@@ -435,6 +516,13 @@
       <li>CollapsedRocks</li>
       <li>RaisedRocks</li>
     </stopWhenHitAt>
+    <filthOnUninterrupted>VWE_Filth_BulletHole</filthOnUninterrupted>
+    <filthOnUninterruptedChance>1</filthOnUninterruptedChance>
+    <filthOnUninterruptedCount>1</filthOnUninterruptedCount>
+    <gauss>
+      <includeInterceptChanceFromDistanceForFriendlyFire>true</includeInterceptChanceFromDistanceForFriendlyFire>
+      <damageWorkerClass>VEF.Weapons.GaussProjectileLinearDamageWorker</damageWorkerClass>
+    </gauss>
 	</VEF.Weapons.ExpandableProjectileDef>
 
 
