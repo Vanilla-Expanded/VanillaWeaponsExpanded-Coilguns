@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="VWE_GaussRifle_Base">
+    <defName>VWE_Gun_GaussRifle_Unique</defName>
+    <label>unique gauss rifle</label>
+    <description>A gauss rifle with customized parts.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/UniqueWeapons/UniqueGaussRifle</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <!-- Can't inherit comps because we need to override CompEquippable with CompEquippableAbility -->
+    <!-- If changes are made to the comps of BaseHumanMakeableGun or parents then they will need to be replicated here -->
+    <comps Inherit="False">
+      <li Class="CompProperties_EquippableAbilityReloadable"/>
+      <!-- Props are populated by traits -->
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Styleable"/>
+      <li Class="CompProperties_Biocodable"/>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+      <li Class="VEF.Weapons.CompProperties_MultiVerbWeapon">
+        <defaultVerbLabel>low power shot</defaultVerbLabel>
+        <switchMode>DoubleVerbToggleMirrored</switchMode>
+
+        <gizmoLabel>High-power mode</gizmoLabel>
+        <gizmoDescription>High-power mode improves penetration capability of the shots, allowing them to penetrate several targets, but increases the warm up time of the weapon. The damage diminishes with each target hit.</gizmoDescription>
+        <gizmoIconPath>UI/Gizmos/GaussHighPowerModeToggle</gizmoIconPath>
+
+        <verbs>
+          <li>
+            <verbLabel>low power shot</verbLabel>
+          </li>
+          <li>
+            <verbLabel>high power shot</verbLabel>
+          </li>
+        </verbs>
+      </li>
+      <li Class="CompProperties_UniqueWeapon">
+        <weaponCategories>
+          <li>Ranged</li>
+          <li>Gun</li>
+          <li>Rifle</li>
+          <li>BurstFire</li>
+          <li>Sighted</li>
+          <li>Attachable</li>
+          <li>VWE_Coilguns</li>
+        </weaponCategories>
+        <namerLabels>
+          <li>gauss rifle</li>
+          <li>sniper</li>
+          <li>headshotter</li>
+          <li>snipegun</li>
+          <li>stalker</li>
+          <li>assassinator</li>
+        </namerLabels>
+      </li>
+    </comps>
+    <generateAllowChance>0</generateAllowChance>
+    <possessionCount>0</possessionCount>
+    <tradeability>Sellable</tradeability>
+    <thingSetMakerTags Inherit="False">
+      <li>RewardStandardHighFreq</li>
+      <li>UniqueWeapon</li>
+    </thingSetMakerTags>
+    <recipeMaker Inherit="False" IsNull="True"/>
+    <thingCategories Inherit="False">
+      <li>WeaponsUnique</li>
+    </thingCategories>
+    <descriptionHyperlinks>
+      <ThingDef>VWE_Gun_GaussRifle</ThingDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+
+  <ThingDef ParentName="VWE_GaussMagnum_Base">
+    <defName>VWE_Gun_GaussMagnum_Unique</defName>
+    <label>unique gauss revolver</label>
+    <description>A gauss revolver with customized parts.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/UniqueWeapons/UniqueGaussRevolver</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <!-- Can't inherit comps because we need to override CompEquippable with CompEquippableAbility -->
+    <!-- If changes are made to the comps of BaseHumanMakeableGun or parents then they will need to be replicated here -->
+    <comps Inherit="False">
+      <li Class="CompProperties_EquippableAbilityReloadable"/>
+      <!-- Props are populated by traits -->
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Styleable"/>
+      <li Class="CompProperties_Biocodable"/>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+      <li Class="VEF.Weapons.CompProperties_MultiVerbWeapon">
+        <defaultVerbLabel>low power shot</defaultVerbLabel>
+        <switchMode>DoubleVerbToggleMirrored</switchMode>
+
+        <gizmoLabel>High-power mode</gizmoLabel>
+        <gizmoDescription>High-power mode improves penetration capability of the shots, allowing them to penetrate several targets, but increases the warm up time of the weapon. The damage diminishes with each target hit.</gizmoDescription>
+        <gizmoIconPath>UI/Gizmos/GaussHighPowerModeToggle</gizmoIconPath>
+
+        <verbs>
+          <li>
+            <verbLabel>low power shot</verbLabel>
+          </li>
+          <li>
+            <verbLabel>high power shot</verbLabel>
+          </li>
+        </verbs>
+      </li>
+      <li Class="CompProperties_UniqueWeapon">
+        <weaponCategories>
+          <li>Ranged</li>
+          <li>Gun</li>
+          <li>Rifle</li>
+          <li>Sighted</li>
+          <li>VWE_Coilguns</li>
+        </weaponCategories>
+        <namerLabels>
+          <li>charge sniper rifle</li>
+          <li>sniper</li>
+          <li>headshotter</li>
+          <li>snipegun</li>
+          <li>stalker</li>
+          <li>assassinator</li>
+        </namerLabels>
+      </li>
+    </comps>
+    <generateAllowChance>0</generateAllowChance>
+    <possessionCount>0</possessionCount>
+    <tradeability>Sellable</tradeability>
+    <thingSetMakerTags Inherit="False">
+      <li>RewardStandardHighFreq</li>
+      <li>UniqueWeapon</li>
+    </thingSetMakerTags>
+    <recipeMaker Inherit="False" IsNull="True"/>
+    <thingCategories Inherit="False">
+      <li>WeaponsUnique</li>
+    </thingCategories>
+    <descriptionHyperlinks>
+      <ThingDef>VWE_Gun_GaussMagnum</ThingDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+
+  <ThingDef ParentName="VWE_GaussLance_Base">
+    <defName>VWE_Gun_GaussLance_Unique</defName>
+    <label>unique gauss lance</label>
+    <description>A gauss lance with customized parts.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/UniqueWeapons/UniqueGaussLance</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <!-- Can't inherit comps because we need to override CompEquippable with CompEquippableAbility -->
+    <!-- If changes are made to the comps of BaseHumanMakeableGun or parents then they will need to be replicated here -->
+    <comps Inherit="False">
+      <li Class="CompProperties_EquippableAbilityReloadable"/>
+      <!-- Props are populated by traits -->
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Styleable"/>
+      <li Class="CompProperties_Biocodable"/>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+      <li Class="VEF.Weapons.CompProperties_MultiVerbWeapon">
+        <defaultVerbLabel>low power shot</defaultVerbLabel>
+        <switchMode>DoubleVerbToggleMirrored</switchMode>
+
+        <gizmoLabel>High-power mode</gizmoLabel>
+        <gizmoDescription>High-power mode improves penetration capability of the shots, allowing them to penetrate several targets, but increases the warm up time of the weapon. The damage diminishes with each target hit.</gizmoDescription>
+        <gizmoIconPath>UI/Gizmos/GaussHighPowerModeToggle</gizmoIconPath>
+
+        <verbs>
+          <li>
+            <verbLabel>low power shot</verbLabel>
+          </li>
+          <li>
+            <verbLabel>high power shot</verbLabel>
+          </li>
+        </verbs>
+      </li>
+      <li Class="CompProperties_UniqueWeapon">
+        <weaponCategories>
+          <li>Ranged</li>
+          <li>Gun</li>
+          <li>Rifle</li>
+          <li>Sighted</li>
+          <li>Attachable</li>
+          <li>VWE_Coilguns</li>
+        </weaponCategories>
+        <namerLabels>
+          <li>charge sniper rifle</li>
+          <li>sniper</li>
+          <li>headshotter</li>
+          <li>snipegun</li>
+          <li>stalker</li>
+          <li>assassinator</li>
+        </namerLabels>
+      </li>
+    </comps>
+    <generateAllowChance>0</generateAllowChance>
+    <possessionCount>0</possessionCount>
+    <tradeability>Sellable</tradeability>
+    <thingSetMakerTags Inherit="False">
+      <li>RewardStandardHighFreq</li>
+      <li>UniqueWeapon</li>
+    </thingSetMakerTags>
+    <recipeMaker Inherit="False" IsNull="True"/>
+    <thingCategories Inherit="False">
+      <li>WeaponsUnique</li>
+    </thingCategories>
+    <descriptionHyperlinks>
+      <ThingDef>VWE_Gun_GaussLance</ThingDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+
+</Defs>

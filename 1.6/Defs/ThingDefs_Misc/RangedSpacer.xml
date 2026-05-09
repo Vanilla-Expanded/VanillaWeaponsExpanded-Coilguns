@@ -3,7 +3,7 @@
 
 	<!--========== Gauss rifle ============-->
 
-	<ThingDef ParentName="BaseHumanMakeableGun">
+	<ThingDef ParentName="BaseHumanMakeableGun" Name="VWE_GaussRifle_Base">
 		<defName>VWE_Gun_GaussRifle</defName>
 		<label>gauss rifle</label>
 		<description>A powerful mass driver rifle utilizing magnetic acceleration to launch ferromagnetic sabots. The incredible velocity and specialized ammunition allow it to completely negate most forms of conventional armor.</description>
@@ -179,7 +179,7 @@
 
 	<!--========== Gauss revolver ============-->
 
-	<ThingDef ParentName="BaseHumanMakeableGun">
+	<ThingDef ParentName="BaseHumanMakeableGun" Name="VWE_GaussMagnum_Base">
 		<defName>VWE_Gun_GaussMagnum</defName>
 		<label>gauss revolver</label>
 		<description>A powerful mass driver pistol utilizing magnetic acceleration to launch ferromagnetic sabots. The incredible velocity and specialized ammunition allow it to completely negate most forms of conventional armor.</description>
@@ -346,7 +346,7 @@
 
 	<!--========== Gauss lance ============-->
 
-	<ThingDef ParentName="BaseHumanMakeableGun">
+	<ThingDef ParentName="BaseHumanMakeableGun" Name="VWE_GaussLance_Base">
 		<defName>VWE_Gun_GaussLance</defName>
 		<label>gauss lance</label>
 		<description>A powerful, long range mass driver lance utilizing magnetic acceleration to launch ferromagnetic sabots. The incredible velocity and specialized ammunition allow it to completely negate most forms of conventional armor.</description>
