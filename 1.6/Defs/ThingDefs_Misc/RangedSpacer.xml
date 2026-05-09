@@ -185,7 +185,7 @@
 		<description>A powerful mass driver pistol utilizing magnetic acceleration to launch ferromagnetic sabots. The incredible velocity and specialized ammunition allow it to completely negate most forms of conventional armor.</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/GaussMagnum</texPath>
+			<texPath>Things/Item/Equipment/WeaponRanged/GaussRevolver</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<soundInteract>VWE_Interact_GaussMagnum</soundInteract>
