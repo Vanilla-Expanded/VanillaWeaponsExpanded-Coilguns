@@ -55,11 +55,9 @@
         </weaponCategories>
         <namerLabels>
           <li>gauss rifle</li>
-          <li>sniper</li>
-          <li>headshotter</li>
-          <li>snipegun</li>
-          <li>stalker</li>
-          <li>assassinator</li>
+          <li>war rifle</li>
+          <li>wargun</li>
+          <li>fusil</li>
         </namerLabels>
       </li>
     </comps>
@@ -130,12 +128,12 @@
           <li>VWE_Coilguns</li>
         </weaponCategories>
         <namerLabels>
-          <li>charge sniper rifle</li>
-          <li>sniper</li>
-          <li>headshotter</li>
-          <li>snipegun</li>
-          <li>stalker</li>
-          <li>assassinator</li>
+          <!-- Same as  -->
+          <li>gauss revolver</li>
+          <li>revolver</li>
+          <li>six-shooter</li>
+          <li>iron</li>
+          <li>hammer</li>
         </namerLabels>
       </li>
     </comps>
@@ -207,8 +205,7 @@
           <li>VWE_Coilguns</li>
         </weaponCategories>
         <namerLabels>
-          <li>charge sniper rifle</li>
-          <li>sniper</li>
+          <li>gauss lance</li>
           <li>headshotter</li>
           <li>snipegun</li>
           <li>stalker</li>
