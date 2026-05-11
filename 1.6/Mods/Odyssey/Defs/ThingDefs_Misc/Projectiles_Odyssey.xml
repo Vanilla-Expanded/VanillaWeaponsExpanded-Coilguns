@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--========== Gauss rifle ============-->
+
+  <ThingDef ParentName="VWE_Bullet_GaussRifle_LowPower">
+    <defName>VWE_Bullet_GaussRifle_LowPower_Ionized</defName>
+    <graphicData>
+      <texPath>Projectiles/DirectShots/CoilgunShotIonized_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+
+  <VEF.Weapons.ExpandableProjectileDef ParentName="VWE_Bullet_GaussRifle">
+    <defName>VWE_Bullet_GaussRifle_Ionized</defName>
+    <graphicData>
+      <texPath>Projectiles/Proj_CoilgunIonizedFadeIn</texPath>
+      <texPathFadeOut>Projectiles/Proj_CoilgunIonizedFadeOut</texPathFadeOut>
+    </graphicData>
+  </VEF.Weapons.ExpandableProjectileDef>
+
+  <!--========== Gauss revolver ============-->
+
+  <ThingDef ParentName="VWE_Bullet_GaussMagnum_LowPower">
+    <defName>VWE_Bullet_GaussMagnum_LowPower_Ionized</defName>
+    <graphicData>
+      <texPath>Projectiles/DirectShots/CoilgunShotIonized_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+
+  <VEF.Weapons.ExpandableProjectileDef ParentName="VWE_Bullet_GaussMagnum">
+    <defName>VWE_Bullet_GaussMagnum_Ionized</defName>
+    <graphicData>
+      <texPath>Projectiles/Proj_CoilgunIonizedFadeIn</texPath>
+      <texPathFadeOut>Projectiles/Proj_CoilgunIonizedFadeOut</texPathFadeOut>
+    </graphicData>
+  </VEF.Weapons.ExpandableProjectileDef>
+
+  <!--========== Gauss lance ============-->
+
+  <ThingDef ParentName="VWE_Bullet_GaussLance_LowPower">
+    <defName>VWE_Bullet_GaussLance_LowPower_Ionized</defName>
+    <graphicData>
+      <texPath>Projectiles/DirectShots/CoilgunShotIonized_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+
+  <VEF.Weapons.ExpandableProjectileDef ParentName="VWE_Bullet_GaussLance">
+    <defName>VWE_Bullet_GaussLance_Ionized</defName>
+    <graphicData>
+      <texPath>Projectiles/Proj_CoilgunIonizedFadeIn</texPath>
+      <texPathFadeOut>Projectiles/Proj_CoilgunIonizedFadeOut</texPathFadeOut>
+    </graphicData>
+  </VEF.Weapons.ExpandableProjectileDef>
+
+</Defs>

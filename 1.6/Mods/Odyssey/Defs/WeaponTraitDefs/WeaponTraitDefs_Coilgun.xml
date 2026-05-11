@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Gauss -->
+  <WeaponTraitDef>
+    <defName>VWE_InertialCore</defName>
+    <label>inertial core</label>
+    <description>This weapon maintains absolute kinetic energy during overcharge, ensuring each consecutively pierced target takes the exact same amount of damage without falloff.</description>
+    <commonality>1</commonality>
+    <canGenerateAlone>true</canGenerateAlone>
+    <weaponCategory>VWE_Coilguns</weaponCategory>
+    <traitAdjectives>
+      <li>piercing</li>
+      <li>unstoppable</li>
+      <li>inertial</li>
+      <li>penetrating</li>
+      <li>constant</li>
+    </traitAdjectives>
+    <statOffsets>
+      <MarketValue>120</MarketValue>
+    </statOffsets>
+    <statFactors>
+      <VEF_GaussProjectileDamageModifier>0</VEF_GaussProjectileDamageModifier>
+    </statFactors>
+  </WeaponTraitDef>
+
+  <WeaponTraitDef>
+    <defName>VWE_BypassRelay</defName>
+    <label>bypass relay</label>
+    <description>This weapon features an optimized charging sequence that halves the aiming time normally required to fire in high-power mode.</description>
+    <commonality>1</commonality>
+    <canGenerateAlone>true</canGenerateAlone>
+    <weaponCategory>VWE_Coilguns</weaponCategory>
+    <traitAdjectives>
+      <li>quick-charge</li>
+      <li>swift</li>
+      <li>bypass</li>
+      <li>optimized</li>
+      <li>snap-shot</li>
+    </traitAdjectives>
+    <statOffsets>
+      <MarketValue>110</MarketValue>
+    </statOffsets>
+    <modExtensions>
+      <li Class="VEF.Weapons.WeaponTraitDefExtension">
+        <conditionalStatAffecters>
+          <li Class="VEF.Weapons.ConditionalStatAffecter_PrimaryVerbLabel">
+            <explanationLabel>high power mode</explanationLabel>
+            <applicableVerbLabels>
+              <li>high power shot</li>
+            </applicableVerbLabels>
+            <statOffsets>
+              <RangedWeapon_WarmupMultiplier>-0.5</RangedWeapon_WarmupMultiplier>
+            </statOffsets>
+          </li>
+        </conditionalStatAffecters>
+      </li>
+    </modExtensions>
+  </WeaponTraitDef>
+
+  <WeaponTraitDef>
+    <defName>VWE_OverdrawnCoils</defName>
+    <label>overdrawn coils</label>
+    <description>This weapon draws excessive power from its reserves during high-power mode, taking slightly longer to charge but delivering vastly increased damage.</description>
+    <commonality>1</commonality>
+    <canGenerateAlone>true</canGenerateAlone>
+    <weaponCategory>VWE_Coilguns</weaponCategory>
+    <traitAdjectives>
+      <li>overdrawn</li>
+      <li>heavy-charge</li>
+      <li>devastating</li>
+      <li>slow-burn</li>
+      <li>amplified</li>
+    </traitAdjectives>
+    <statOffsets>
+      <MarketValue>130</MarketValue>
+    </statOffsets>
+    <modExtensions>
+      <li Class="VEF.Weapons.WeaponTraitDefExtension">
+        <conditionalStatAffecters>
+          <li Class="VEF.Weapons.ConditionalStatAffecter_PrimaryVerbLabel">
+            <explanationLabel>high power mode</explanationLabel>
+            <applicableVerbLabels>
+              <li>high power shot</li>
+            </applicableVerbLabels>
+            <statOffsets>
+              <RangedWeapon_WarmupMultiplier>0.25</RangedWeapon_WarmupMultiplier>
+              <RangedWeapon_DamageMultiplier>0.5</RangedWeapon_DamageMultiplier>
+            </statOffsets>
+          </li>
+        </conditionalStatAffecters>
+      </li>
+    </modExtensions>
+  </WeaponTraitDef>
+
+  <WeaponTraitDef>
+    <defName>VWE_IonizedSabot</defName>
+    <label>ionized sabot</label>
+    <description>This weapon magnetizes its projectiles with volatile energy, increasing damage across all firing modes.</description>
+    <commonality>1</commonality>
+    <canGenerateAlone>true</canGenerateAlone>
+    <weaponCategory>VWE_Coilguns</weaponCategory>
+    <exclusionTags>
+      <li>AmmoType</li>
+    </exclusionTags>
+    <traitAdjectives>
+      <li>ionized</li>
+      <li>azure</li>
+      <li>plasma</li>
+      <li>glowing</li>
+      <li>charged</li>
+    </traitAdjectives>
+    <statOffsets>
+      <MarketValue>90</MarketValue>
+      <RangedWeapon_DamageMultiplier>0.15</RangedWeapon_DamageMultiplier>
+    </statOffsets>
+    <modExtensions>
+      <li Class="VEF.Weapons.WeaponTraitDefExtension">
+        <!-- Default to gauss rifle projectiles, in case some weapon includes it but doesn't add its own override. -->
+        <verbsOverride>
+          <li>
+            <verbClass>Verb_Shoot</verbClass>
+            <!-- Label required for multi verb comp. Translating it is safe, since the comp uses the untranslated label (which RW keeps around). -->
+            <label>low power shot</label>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>VWE_Bullet_GaussRifle_LowPower_Ionized</defaultProjectile>
+            <warmupTime>2</warmupTime>
+            <range>27.9</range>
+            <ticksBetweenBurstShots>16</ticksBetweenBurstShots>
+            <burstShotCount>3</burstShotCount>
+            <soundCast>VWE_Shot_GaussRifle</soundCast>
+            <soundCastTail>GunTail_Medium</soundCastTail>
+            <muzzleFlashScale>5</muzzleFlashScale>
+          </li>
+          <li>
+            <verbClass>Verb_Shoot</verbClass>
+            <!-- Label required for multi verb comp. Translating it is safe, since the comp uses the untranslated label (which RW keeps around). -->
+            <label>high power shot</label>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>VWE_Bullet_GaussRifle_Ionized</defaultProjectile>
+            <warmupTime>4</warmupTime>
+            <range>27.9</range>
+            <ticksBetweenBurstShots>16</ticksBetweenBurstShots>
+            <burstShotCount>3</burstShotCount>
+            <soundCast>VWE_Shot_GaussRifle</soundCast>
+            <soundCastTail>GunTail_Medium</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+            <targetParams>
+              <canTargetLocations>true</canTargetLocations>
+              <canTargetPawns>true</canTargetPawns>
+              <canTargetBuildings>true</canTargetBuildings>
+            </targetParams>
+          </li>
+        </verbsOverride>
+        <!-- Per-weapon overrides. -->
+        <verbsOverrides>
+          <li>
+            <key>VWE_Gun_GaussMagnum_Unique</key>
+            <value>
+              <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <!-- Label required for multi verb comp. Translating it is safe, since the comp uses the untranslated label (which RW keeps around). -->
+                <label>low power shot</label>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>VWE_Bullet_GaussMagnum_LowPower_Ionized</defaultProjectile>
+                <warmupTime>0.6</warmupTime>
+                <range>19.9</range>
+                <soundCast>VWE_Shot_GaussMagnum</soundCast>
+                <soundCastTail>GunTail_Light</soundCastTail>
+                <muzzleFlashScale>5</muzzleFlashScale>
+              </li>
+              <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <!-- Label required for multi verb comp. Translating it is safe, since the comp uses the untranslated label (which RW keeps around). -->
+                <label>high power shot</label>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>VWE_Bullet_GaussMagnum_Ionized</defaultProjectile>
+                <warmupTime>1.2</warmupTime>
+                <range>19.9</range>
+                <soundCast>VWE_Shot_GaussMagnum</soundCast>
+                <soundCastTail>GunTail_Light</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+                <targetParams>
+                  <canTargetLocations>true</canTargetLocations>
+                  <canTargetPawns>true</canTargetPawns>
+                  <canTargetBuildings>true</canTargetBuildings>
+                </targetParams>
+              </li>
+            </value>
+          </li>
+          <li>
+            <key>VWE_Gun_GaussLance_Unique</key>
+            <value>
+              <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <!-- Label required for multi verb comp. Translating it is safe, since the comp uses the untranslated label (which RW keeps around). -->
+                <label>low power shot</label>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>VWE_Bullet_GaussLance_LowPower_Ionized</defaultProjectile>
+                <warmupTime>2.4166666</warmupTime>
+                <range>44.9</range>
+                <soundCast>VWE_Shot_GaussLance</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>7</muzzleFlashScale>
+              </li>
+              <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <!-- Label required for multi verb comp. Translating it is safe, since the comp uses the untranslated label (which RW keeps around). -->
+                <label>high power shot</label>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>VWE_Bullet_GaussLance_Ionized</defaultProjectile>
+                <warmupTime>4.833333</warmupTime>
+                <range>44.9</range>
+                <soundCast>VWE_Shot_GaussLance</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>14</muzzleFlashScale>
+                <targetParams>
+                  <canTargetLocations>true</canTargetLocations>
+                  <canTargetPawns>true</canTargetPawns>
+                  <canTargetBuildings>true</canTargetBuildings>
+                </targetParams>
+              </li>
+            </value>
+          </li>
+        </verbsOverrides>
+      </li>
+    </modExtensions>
+  </WeaponTraitDef>
+
+  <WeaponTraitDef>
+    <defName>VWE_Hypercapacitors</defName>
+    <label>hypercapacitors</label>
+    <description>This weapon is fitted with advanced energy banks that double the possible burst count for all shots, though the resulting rapid-fire sequence no longer guarantees armor penetration.</description>
+    <commonality>1</commonality>
+    <canGenerateAlone>true</canGenerateAlone>
+    <weaponCategory>VWE_Coilguns</weaponCategory>
+    <traitAdjectives>
+      <li>hyper-burst</li>
+      <li>rapid-discharge</li>
+      <li>showering</li>
+      <li>capacitor</li>
+      <li>twin-linked</li>
+    </traitAdjectives>
+    <burstShotCountMultiplier>2</burstShotCountMultiplier>
+    <statOffsets>
+      <MarketValue>100</MarketValue>
+      <RangedWeapon_ArmorPenetrationMultiplier>-0.5</RangedWeapon_ArmorPenetrationMultiplier>
+    </statOffsets>
+  </WeaponTraitDef>
+
+  <WeaponTraitDef>
+    <defName>VWE_InvertedRailTuning</defName>
+    <label>inverted rail tuning</label>
+    <description>This weapon is radically tuned to deliver devastating low-power shots at close range while reserving its high-power mode for sweeping but less lethal long-range engagements.</description>
+    <commonality>1</commonality>
+    <canGenerateAlone>true</canGenerateAlone>
+    <weaponCategory>VWE_Coilguns</weaponCategory>
+    <traitAdjectives>
+      <li>inverted</li>
+      <li>bipolar</li>
+      <li>tuned</li>
+      <li>split-range</li>
+      <li>erratic</li>
+    </traitAdjectives>
+    <statOffsets>
+      <MarketValue>80</MarketValue>
+    </statOffsets>
+    <modExtensions>
+      <li Class="VEF.Weapons.WeaponTraitDefExtension">
+        <conditionalStatAffecters>
+          <li Class="VEF.Weapons.ConditionalStatAffecter_PrimaryVerbLabel">
+            <explanationLabel>low power mode</explanationLabel>
+            <applicableVerbLabels>
+              <li>low power shot</li>
+            </applicableVerbLabels>
+            <statOffsets>
+              <RangedWeapon_RangeMultiplier>-0.5</RangedWeapon_RangeMultiplier>
+              <RangedWeapon_DamageMultiplier>0.5</RangedWeapon_DamageMultiplier>
+            </statOffsets>
+          </li>
+          <li Class="VEF.Weapons.ConditionalStatAffecter_PrimaryVerbLabel">
+            <explanationLabel>high power mode</explanationLabel>
+            <applicableVerbLabels>
+              <li>high power shot</li>
+            </applicableVerbLabels>
+            <statOffsets>
+              <RangedWeapon_RangeMultiplier>0.5</RangedWeapon_RangeMultiplier>
+              <RangedWeapon_DamageMultiplier>-0.5</RangedWeapon_DamageMultiplier>
+            </statOffsets>
+          </li>
+        </conditionalStatAffecters>
+      </li>
+    </modExtensions>
+  </WeaponTraitDef>
+
+</Defs>

@@ -125,7 +125,7 @@
 		</comps>
 	</ThingDef>
 
-  <ThingDef Name="VWE_Bullet_GaussRifle" ParentName="BaseBullet">
+  <ThingDef Name="VWE_Bullet_GaussRifle_LowPower" ParentName="BaseBullet">
     <defName>VWE_Bullet_GaussRifle_LowPower</defName>
     <label>gauss rifle sabot</label>
     <projectile>
@@ -141,7 +141,7 @@
     </graphicData>
   </ThingDef>
 
-	<VEF.Weapons.ExpandableProjectileDef ParentName="VWE_Bullet_GaussRifle">
+	<VEF.Weapons.ExpandableProjectileDef Name="VWE_Bullet_GaussRifle" ParentName="VWE_Bullet_GaussRifle_LowPower">
 		<defName>VWE_Bullet_GaussRifle</defName>
 		<thingClass>VEF.Weapons.GaussProjectile</thingClass>
 		<graphicData>
@@ -292,7 +292,7 @@
 		</comps>
 	</ThingDef>
 
-  <ThingDef Name="VWE_Bullet_GaussMagnum" ParentName="BaseBullet">
+  <ThingDef Name="VWE_Bullet_GaussMagnum_LowPower" ParentName="BaseBullet">
     <defName>VWE_Bullet_GaussMagnum_LowPower</defName>
     <label>gauss revolver sabot</label>
     <projectile>
@@ -308,7 +308,7 @@
     </graphicData>
   </ThingDef>
 
-	<VEF.Weapons.ExpandableProjectileDef ParentName="VWE_Bullet_GaussMagnum">
+	<VEF.Weapons.ExpandableProjectileDef Name="VWE_Bullet_GaussMagnum" ParentName="VWE_Bullet_GaussMagnum_LowPower" >
 		<defName>VWE_Bullet_GaussMagnum</defName>
     <thingClass>VEF.Weapons.GaussProjectile</thingClass>
 		<graphicData>
@@ -472,7 +472,7 @@
 	  </modExtensions>
 	</ThingDef>
 
-  <ThingDef Name="VWE_Bullet_GaussLance" ParentName="BaseBullet">
+  <ThingDef Name="VWE_Bullet_GaussLance_LowPower" ParentName="BaseBullet">
     <defName>VWE_Bullet_GaussLance_LowPower</defName>
     <label>gauss lance sabot</label>
     <projectile>
@@ -488,7 +488,7 @@
     </graphicData>
   </ThingDef>
 
-	<VEF.Weapons.ExpandableProjectileDef ParentName="VWE_Bullet_GaussLance">
+	<VEF.Weapons.ExpandableProjectileDef Name="VWE_Bullet_GaussLance" ParentName="VWE_Bullet_GaussLance_LowPower">
 		<defName>VWE_Bullet_GaussLance</defName>
     <thingClass>VEF.Weapons.GaussProjectile</thingClass>
 		<graphicData>
