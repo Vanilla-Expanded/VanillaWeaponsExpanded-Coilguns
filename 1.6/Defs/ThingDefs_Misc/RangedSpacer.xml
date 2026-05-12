@@ -169,6 +169,8 @@
 			<li>RaisedRocks</li>
 		</stopWhenHitAt>
     <stopMotionOnFadeoutStarted>true</stopMotionOnFadeoutStarted>
+    <impactFleck>ShotHit_Dirt</impactFleck>
+    <triggerWaterSplashes>true</triggerWaterSplashes>
     <filthOnUninterrupted>VWE_Filth_BulletHole</filthOnUninterrupted>
     <filthOnUninterruptedChance>1</filthOnUninterruptedChance>
     <filthOnUninterruptedCount>1</filthOnUninterruptedCount>
@@ -337,6 +339,8 @@
       <li>RaisedRocks</li>
     </stopWhenHitAt>
     <stopMotionOnFadeoutStarted>true</stopMotionOnFadeoutStarted>
+    <impactFleck>ShotHit_Dirt</impactFleck>
+    <triggerWaterSplashes>true</triggerWaterSplashes>
     <filthOnUninterrupted>VWE_Filth_BulletHole</filthOnUninterrupted>
     <filthOnUninterruptedChance>1</filthOnUninterruptedChance>
     <filthOnUninterruptedCount>1</filthOnUninterruptedCount>
@@ -518,6 +522,8 @@
       <li>RaisedRocks</li>
     </stopWhenHitAt>
     <stopMotionOnFadeoutStarted>true</stopMotionOnFadeoutStarted>
+    <impactFleck>ShotHit_Dirt</impactFleck>
+    <triggerWaterSplashes>true</triggerWaterSplashes>
     <filthOnUninterrupted>VWE_Filth_BulletHole</filthOnUninterrupted>
     <filthOnUninterruptedChance>1</filthOnUninterruptedChance>
     <filthOnUninterruptedCount>1</filthOnUninterruptedCount>
