@@ -498,7 +498,6 @@
 		<reachMaxRangeAlways>true</reachMaxRangeAlways>
 		<drawOffscreen>true</drawOffscreen>
 		<minDistanceToAffect>1.9</minDistanceToAffect>
-    <drawOffscreen>true</drawOffscreen>
 		<lifeTimeDuration>50</lifeTimeDuration>
 		<widthScaleFactor>0.10</widthScaleFactor>
 		<heightScaleFactor>1</heightScaleFactor>
