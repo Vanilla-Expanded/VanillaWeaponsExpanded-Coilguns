@@ -19,6 +19,8 @@
       <!-- Can't attach to pawns -->
       <canFilthAttach>false</canFilthAttach>
       <cleaningSound>Interact_CleanFilth_Dirt</cleaningSound>
+      <!-- Unaffected by terrains that get less filth in general -->
+      <ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
     </filth>
     <statBases>
       <BeautyOutdoors>-1</BeautyOutdoors>
