@@ -139,6 +139,13 @@
       <texPath>Projectiles/DirectShots/CoilgunShot_Big</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <modExtensions>
+      <li Class="VEF.Weapons.ProjectileExtension">
+        <filthOnMiss>VWE_Filth_BulletHole</filthOnMiss>
+        <filthOnMissChance>1</filthOnMissChance>
+        <filthOnMissCount>1</filthOnMissCount>
+      </li>
+    </modExtensions>
   </ThingDef>
 
 	<VEF.Weapons.ExpandableProjectileDef Name="VWE_Bullet_GaussRifle" ParentName="VWE_Bullet_GaussRifle_LowPower">
@@ -178,6 +185,7 @@
       <includeInterceptChanceFromDistanceForFriendlyFire>true</includeInterceptChanceFromDistanceForFriendlyFire>
       <damageWorkerClass>VEF.Weapons.GaussProjectileLinearDamageWorker</damageWorkerClass>
     </gauss>
+    <modExtensions Inherit="False" />
 	</VEF.Weapons.ExpandableProjectileDef>
 
 	<!--========== Gauss revolver ============-->
@@ -309,6 +317,13 @@
       <texPath>Projectiles/DirectShots/CoilgunShot_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <modExtensions>
+      <li Class="VEF.Weapons.ProjectileExtension">
+        <filthOnMiss>VWE_Filth_BulletHole</filthOnMiss>
+        <filthOnMissChance>1</filthOnMissChance>
+        <filthOnMissCount>1</filthOnMissCount>
+      </li>
+    </modExtensions>
   </ThingDef>
 
 	<VEF.Weapons.ExpandableProjectileDef Name="VWE_Bullet_GaussMagnum" ParentName="VWE_Bullet_GaussMagnum_LowPower" >
@@ -348,6 +363,7 @@
       <includeInterceptChanceFromDistanceForFriendlyFire>true</includeInterceptChanceFromDistanceForFriendlyFire>
       <damageWorkerClass>VEF.Weapons.GaussProjectileLinearDamageWorker</damageWorkerClass>
     </gauss>
+    <modExtensions Inherit="False" />
 	</VEF.Weapons.ExpandableProjectileDef>
 
 	<!--========== Gauss lance ============-->
@@ -492,6 +508,13 @@
       <texPath>Projectiles/DirectShots/CoilgunShot_Big</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <modExtensions>
+      <li Class="VEF.Weapons.ProjectileExtension">
+        <filthOnMiss>VWE_Filth_BulletHole</filthOnMiss>
+        <filthOnMissChance>1</filthOnMissChance>
+        <filthOnMissCount>1</filthOnMissCount>
+      </li>
+    </modExtensions>
   </ThingDef>
 
 	<VEF.Weapons.ExpandableProjectileDef Name="VWE_Bullet_GaussLance" ParentName="VWE_Bullet_GaussLance_LowPower">
@@ -531,6 +554,7 @@
       <includeInterceptChanceFromDistanceForFriendlyFire>true</includeInterceptChanceFromDistanceForFriendlyFire>
       <damageWorkerClass>VEF.Weapons.GaussProjectileLinearDamageWorker</damageWorkerClass>
     </gauss>
+    <modExtensions Inherit="False" />
 	</VEF.Weapons.ExpandableProjectileDef>
 
 
