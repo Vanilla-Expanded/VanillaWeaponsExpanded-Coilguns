@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FleckDef ParentName="FleckBase_RandomGraphic_Thrown">
+    <defName>VFE_GaussImpact</defName>
+    <randomGraphics>
+      <li>
+        <shaderType>Mote</shaderType>
+        <graphicClass>Graphic_Fleck</graphicClass>
+        <texPath>Things/Flecks/ImpactDebrisA</texPath>
+        <renderInstanced>true</renderInstanced>
+      </li>
+      <li>
+        <shaderType>Mote</shaderType>
+        <graphicClass>Graphic_Fleck</graphicClass>
+        <texPath>Things/Flecks/ImpactDebrisB</texPath>
+        <renderInstanced>true</renderInstanced>
+      </li>
+      <li>
+        <shaderType>Mote</shaderType>
+        <graphicClass>Graphic_Fleck</graphicClass>
+        <texPath>Things/Flecks/ImpactDebrisC</texPath>
+        <renderInstanced>true</renderInstanced>
+      </li>
+    </randomGraphics>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <solidTime>0.5</solidTime>
+    <fadeOutTime>0.25</fadeOutTime>
+    <collide>true</collide>
+  </FleckDef>
+
+</Defs>

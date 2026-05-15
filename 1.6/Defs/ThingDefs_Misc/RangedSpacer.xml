@@ -176,7 +176,12 @@
 			<li>RaisedRocks</li>
 		</stopWhenHitAt>
     <stopMotionOnFadeoutStarted>true</stopMotionOnFadeoutStarted>
-    <impactFleck>ShotHit_Dirt</impactFleck>
+    <impactFleck>VFE_GaussImpact</impactFleck>
+    <impactFleckRotation>0~360</impactFleckRotation>
+    <impactFleckRotationRate>-240~240</impactFleckRotationRate>
+    <impactFleckAngle>-10~10</impactFleckAngle>
+    <impactFleckSpeed>20~25</impactFleckSpeed>
+    <impactFleckUsesProjectileAngle>true</impactFleckUsesProjectileAngle>
     <triggerWaterSplashes>true</triggerWaterSplashes>
     <filthOnUninterrupted>VWE_Filth_BulletHole</filthOnUninterrupted>
     <filthOnUninterruptedChance>1</filthOnUninterruptedChance>
@@ -354,7 +359,12 @@
       <li>RaisedRocks</li>
     </stopWhenHitAt>
     <stopMotionOnFadeoutStarted>true</stopMotionOnFadeoutStarted>
-    <impactFleck>ShotHit_Dirt</impactFleck>
+    <impactFleck>VFE_GaussImpact</impactFleck>
+    <impactFleckRotation>0~360</impactFleckRotation>
+    <impactFleckRotationRate>-240~240</impactFleckRotationRate>
+    <impactFleckAngle>-10~10</impactFleckAngle>
+    <impactFleckSpeed>20~25</impactFleckSpeed>
+    <impactFleckUsesProjectileAngle>true</impactFleckUsesProjectileAngle>
     <triggerWaterSplashes>true</triggerWaterSplashes>
     <filthOnUninterrupted>VWE_Filth_BulletHole</filthOnUninterrupted>
     <filthOnUninterruptedChance>1</filthOnUninterruptedChance>
@@ -545,7 +555,12 @@
       <li>RaisedRocks</li>
     </stopWhenHitAt>
     <stopMotionOnFadeoutStarted>true</stopMotionOnFadeoutStarted>
-    <impactFleck>ShotHit_Dirt</impactFleck>
+    <impactFleck>VFE_GaussImpact</impactFleck>
+    <impactFleckRotation>0~360</impactFleckRotation>
+    <impactFleckRotationRate>-240~240</impactFleckRotationRate>
+    <impactFleckAngle>-10~10</impactFleckAngle>
+    <impactFleckSpeed>10~15</impactFleckSpeed>
+    <impactFleckUsesProjectileAngle>true</impactFleckUsesProjectileAngle>
     <triggerWaterSplashes>true</triggerWaterSplashes>
     <filthOnUninterrupted>VWE_Filth_BulletHole</filthOnUninterrupted>
     <filthOnUninterruptedChance>1</filthOnUninterruptedChance>
