@@ -139,6 +139,12 @@
       <texPath>Projectiles/DirectShots/CoilgunShot_Big</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <comps>
+      <li Class="VEF.Weapons.Projectile_VisualEffectCompProperties">
+        <gaussDistortion>true</gaussDistortion>
+        <lightningGlow>true</lightningGlow>
+      </li>
+    </comps>
     <modExtensions>
       <li Class="VEF.Weapons.ProjectileExtension">
         <filthOnMiss>VWE_Filth_BulletHole</filthOnMiss>
@@ -189,7 +195,10 @@
     <gauss>
       <includeInterceptChanceFromDistanceForFriendlyFire>true</includeInterceptChanceFromDistanceForFriendlyFire>
       <damageWorkerClass>VEF.Weapons.GaussProjectileLinearDamageWorker</damageWorkerClass>
+      <lightningGlow>true</lightningGlow>
+      <gaussDistortion>true</gaussDistortion>
     </gauss>
+    <comps Inherit="False" />
     <modExtensions Inherit="False" />
 	</VEF.Weapons.ExpandableProjectileDef>
 
@@ -322,6 +331,12 @@
       <texPath>Projectiles/DirectShots/CoilgunShot_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <comps>
+      <li Class="VEF.Weapons.Projectile_VisualEffectCompProperties">
+        <gaussDistortion>true</gaussDistortion>
+        <lightningGlow>true</lightningGlow>
+      </li>
+    </comps>
     <modExtensions>
       <li Class="VEF.Weapons.ProjectileExtension">
         <filthOnMiss>VWE_Filth_BulletHole</filthOnMiss>
@@ -372,7 +387,10 @@
     <gauss>
       <includeInterceptChanceFromDistanceForFriendlyFire>true</includeInterceptChanceFromDistanceForFriendlyFire>
       <damageWorkerClass>VEF.Weapons.GaussProjectileLinearDamageWorker</damageWorkerClass>
+      <lightningGlow>true</lightningGlow>
+      <gaussDistortion>true</gaussDistortion>
     </gauss>
+    <comps Inherit="False" />
     <modExtensions Inherit="False" />
 	</VEF.Weapons.ExpandableProjectileDef>
 
@@ -518,6 +536,12 @@
       <texPath>Projectiles/DirectShots/CoilgunShot_Big</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <comps>
+      <li Class="VEF.Weapons.Projectile_VisualEffectCompProperties">
+        <gaussDistortion>true</gaussDistortion>
+        <lightningGlow>true</lightningGlow>
+      </li>
+    </comps>
     <modExtensions>
       <li Class="VEF.Weapons.ProjectileExtension">
         <filthOnMiss>VWE_Filth_BulletHole</filthOnMiss>
@@ -568,7 +592,10 @@
     <gauss>
       <includeInterceptChanceFromDistanceForFriendlyFire>true</includeInterceptChanceFromDistanceForFriendlyFire>
       <damageWorkerClass>VEF.Weapons.GaussProjectileLinearDamageWorker</damageWorkerClass>
+      <lightningGlow>true</lightningGlow>
+      <gaussDistortion>true</gaussDistortion>
     </gauss>
+    <comps Inherit="False" />
     <modExtensions Inherit="False" />
 	</VEF.Weapons.ExpandableProjectileDef>
 
