@@ -70,6 +70,7 @@
         <range>27.9</range>
         <ticksBetweenBurstShots>16</ticksBetweenBurstShots>
         <burstShotCount>3</burstShotCount>
+        <warmupEffecter>VWE_Warmup_Effect</warmupEffecter>
         <soundCast>VWE_Shot_GaussRifle</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
@@ -182,7 +183,7 @@
 			<li>RaisedRocks</li>
 		</stopWhenHitAt>
     <stopMotionOnFadeoutStarted>true</stopMotionOnFadeoutStarted>
-    <impactFleck>VFE_GaussImpact</impactFleck>
+    <impactFleck>VWE_GaussImpact</impactFleck>
     <impactFleckRotation>0~360</impactFleckRotation>
     <impactFleckRotationRate>-240~240</impactFleckRotationRate>
     <impactFleckAngle>-10~10</impactFleckAngle>
@@ -374,7 +375,7 @@
       <li>RaisedRocks</li>
     </stopWhenHitAt>
     <stopMotionOnFadeoutStarted>true</stopMotionOnFadeoutStarted>
-    <impactFleck>VFE_GaussImpact</impactFleck>
+    <impactFleck>VWE_GaussImpact</impactFleck>
     <impactFleckRotation>0~360</impactFleckRotation>
     <impactFleckRotationRate>-240~240</impactFleckRotationRate>
     <impactFleckAngle>-10~10</impactFleckAngle>
@@ -579,7 +580,7 @@
       <li>RaisedRocks</li>
     </stopWhenHitAt>
     <stopMotionOnFadeoutStarted>true</stopMotionOnFadeoutStarted>
-    <impactFleck>VFE_GaussImpact</impactFleck>
+    <impactFleck>VWE_GaussImpact</impactFleck>
     <impactFleckRotation>0~360</impactFleckRotation>
     <impactFleckRotationRate>-240~240</impactFleckRotationRate>
     <impactFleckAngle>-10~10</impactFleckAngle>

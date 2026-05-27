@@ -2,7 +2,7 @@
 <Defs>
 
   <FleckDef ParentName="FleckBase_RandomGraphic_Thrown">
-    <defName>VFE_GaussImpact</defName>
+    <defName>VWE_GaussImpact</defName>
     <randomGraphics>
       <li>
         <shaderType>Mote</shaderType>
@@ -29,4 +29,16 @@
     <collide>true</collide>
   </FleckDef>
 
+  <FleckDef ParentName="FleckBase">
+    <defName>VWE_WarlordZap</defName>
+    <solidTime>0.3</solidTime>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <graphicData Class="VanillaPsycastsExpanded.Graphics.GraphicData_Animated">
+      <texPath>Effects/Warlord/WarlordZap</texPath>
+      <ticksPerFrame>3</ticksPerFrame>
+      <graphicClass>VanillaPsycastsExpanded.Graphics.Graphic_Fleck_Animated</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <random>true</random>
+    </graphicData>
+  </FleckDef>
 </Defs>
