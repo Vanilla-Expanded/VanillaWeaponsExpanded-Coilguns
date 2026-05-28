@@ -4,13 +4,23 @@
     <defName>VWE_Warmup_Effect</defName>
     <children>
       <li Class="VEF.Graphics.SubEffecterDef_SlideTowardsTarget">
-        <fleckDef>VWE_WarlordZap</fleckDef>
+        <fleckDef>VWE_GaussWarmup</fleckDef>
         <spawnLocType>OnSource</spawnLocType>
-        <chancePerTick>0.07</chancePerTick>
-        <scale>0.1~0.3</scale>
-        <scaleByEnd>0.8~1.2</scaleByEnd>
-        <rotationRate>-60~60</rotationRate>
+        <chancePerTick>0.09</chancePerTick>
+        <rotationRate>0</rotationRate>
+        <rotation>-0.15~0.15</rotation>
         <speed>0.6~1.8</speed>
+        <scaleXByStart>0.1~0.3</scaleXByStart>
+        <scaleYByStart>0.1~0.3</scaleYByStart>
+        <scaleXByEnd>0.6~0.8</scaleXByEnd>
+        <scaleYByEnd>0.2~0.4</scaleYByEnd>
+        <startPointFactor>0.4~0.6</startPointFactor>
+        <endPointFactor>0.6~0.7</endPointFactor>
+        <minimumProgress>0.1</minimumProgress>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_Sustainer</subEffecterClass>
+        <soundDef>VWE_GaussWarmup</soundDef>
       </li>
     </children>
   </EffecterDef>

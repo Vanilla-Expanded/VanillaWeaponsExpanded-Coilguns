@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SoundDef>
+    <defName>VWE_GaussWarmup</defName>
+    <context>MapOnly</context>
+    <sustain>true</sustain>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Weapon/ChargingShot/ChargingShot_Sustainer_01a</clipPath>
+          </li>
+        </grains>
+        <volumeRange>100</volumeRange>
+        <distRange>5~60</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+</Defs>

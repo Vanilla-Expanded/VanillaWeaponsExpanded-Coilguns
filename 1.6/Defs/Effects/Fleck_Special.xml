@@ -30,13 +30,14 @@
   </FleckDef>
 
   <FleckDef ParentName="FleckBase">
-    <defName>VWE_WarlordZap</defName>
+    <defName>VWE_GaussWarmup</defName>
+    <fleckSystemClass>VEF.Graphics.FleckSystemCustom</fleckSystemClass>
     <solidTime>0.3</solidTime>
     <altitudeLayer>MoteOverhead</altitudeLayer>
-    <graphicData Class="VanillaPsycastsExpanded.Graphics.GraphicData_Animated">
-      <texPath>Effects/Warlord/WarlordZap</texPath>
-      <ticksPerFrame>3</ticksPerFrame>
-      <graphicClass>VanillaPsycastsExpanded.Graphics.Graphic_Fleck_Animated</graphicClass>
+    <graphicData Class="VEF.Graphics.GraphicData_Animated">
+      <texPath>Things/Flecks/GaussWarmup</texPath>
+      <ticksPerFrame>4</ticksPerFrame>
+      <graphicClass>VEF.Graphics.Graphic_Fleck_Animated</graphicClass>
       <shaderType>MoteGlow</shaderType>
       <random>true</random>
     </graphicData>
