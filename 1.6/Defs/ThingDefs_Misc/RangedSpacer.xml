@@ -405,6 +405,7 @@
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/GaussLance</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.2</drawSize>
 		</graphicData>
 		<soundInteract>VWE_Interact_GaussRifle</soundInteract>
 		<statBases> 
@@ -483,7 +484,7 @@
 				<cooldownTime>2.6</cooldownTime>
 			</li>
 		</tools>
-		<equippedAngleOffset>53</equippedAngleOffset>
+		<equippedAngleOffset>45</equippedAngleOffset>
     <comps>
       <li Class="VEF.Weapons.CompProperties_MultiVerbWeapon">
         <defaultVerbLabel>low power shot</defaultVerbLabel>
