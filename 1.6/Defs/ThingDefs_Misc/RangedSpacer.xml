@@ -270,6 +270,7 @@
         <range>19.9</range>
         <soundCast>VWE_Shot_GaussMagnum</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
+        <warmupEffecter>VWE_Warmup_Effect</warmupEffecter>
         <muzzleFlashScale>9</muzzleFlashScale>
         <targetParams>
           <canTargetLocations>true</canTargetLocations>
@@ -466,6 +467,7 @@
         <range>44.9</range>
         <soundCast>VWE_Shot_GaussLance</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
+        <warmupEffecter>VWE_Warmup_Effect</warmupEffecter>
         <muzzleFlashScale>14</muzzleFlashScale>
         <targetParams>
           <canTargetLocations>true</canTargetLocations>
