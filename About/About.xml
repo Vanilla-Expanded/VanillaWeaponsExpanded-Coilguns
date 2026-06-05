@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
 	<name>Vanilla Weapons Expanded - Coilguns</name>
-	<author>Oskar Potocki, AveryTheKitty, Taranchuk</author>
+	<author>Oskar Potocki, AveryTheKitty, Taranchuk, Sokyran</author>
 	<supportedVersions>
 		<li>1.4</li>
 		<li>1.5</li>
@@ -9,9 +9,11 @@
 	</supportedVersions>
 	<packageId>VanillaExpanded.VWEC</packageId>
 	<modIconPath IgnoreIfNoMatchingField="True">UI/VELogo</modIconPath>
-	<description>Vanilla Weapons Expanded - Coilguns is an addition to one of the most popular mods of Vanilla Expanded collection - Vanilla Weapons Expanded, however it can be played without it. This mod adds a selection of spacer-tech weapons, fully craftable upon researching mass drivers technology. Coilguns come with a unique gimmick - whilst their firing speed and aiming time are quite unforgiving, projectiles fires from these weapons pierce any target they hit - flesh or metal, as well as any obstacles. Each obstacle reduces damage dealt to the next unlucky object/creature, but effectively these weapons allow your colonists to score multi-kills with a single shot.
+	<description>The Vanilla Weapons Expanded 2 - Coilguns mod remakes the original submodule by introducing high-tier Spacer-tech mass drivers: the Gauss Rifle, Revolver, and Lance, all featuring absolute armor penetration. These weapons, unlocked via the "Portable Mass Drivers" research project, feature a signature high-power mode that enables penetrating multiple targets, though at the cost of doubled warm-up time and damage reduction per target hit.
 
-Shots fired by these weapons cannot penetrate mountains or reinforced walls from Vanilla Furniture Expanded - Spacer.
+If you’re one of the happy owners of Odyssey DLC, customization is expanded with six new weapon traits: Inertial core, Bypass relay, Overdrawn Coils, Ionized sabots, Hypercapacitors, and Inverted rail tuning. 
+
+Projectile behavior is improved to prevent friendly fire, which can be fully disabled in storyteller settings. Finally, the weapons now boast brand new visual effects, including a high-power charging animation, debris, and hard-to-clean bullet holes at the point of impact.
 
 Vanilla Weapons Expanded is part of a series of mods expanding on everyday life on the Rimworld. When paired together with a brand new Vanilla Apparel Expanded and Vanilla Armours Expanded, you can bring something to your game that will keep you interested in it for days.</description>
 	<modDependencies>
